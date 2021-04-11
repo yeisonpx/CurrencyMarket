@@ -1,0 +1,17 @@
+C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Infraestructure\bin\Debug\netcoreapp3.1\CurrencyMarket.Infraestructure.deps.json
+C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Infraestructure\bin\Debug\netcoreapp3.1\CurrencyMarket.Infraestructure.dll
+C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Infraestructure\obj\Debug\netcoreapp3.1\CurrencyMarket.Infraestructure.csprojAssemblyReference.cache
+C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Infraestructure\obj\Debug\netcoreapp3.1\CurrencyMarket.Infraestructure.AssemblyInfoInputs.cache
+C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Infraestructure\obj\Debug\netcoreapp3.1\CurrencyMarket.Infraestructure.AssemblyInfo.cs
+C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Infraestructure\bin\Debug\netcoreapp3.1\CurrencyMarket.Infraestructure.runtimeconfig.json
+C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Infraestructure\bin\Debug\netcoreapp3.1\CurrencyMarket.Infraestructure.runtimeconfig.dev.json
+C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Infraestructure\bin\Debug\netcoreapp3.1\CurrencyMarket.Infraestructure.pdb
+C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Infraestructure\bin\Debug\netcoreapp3.1\CurrencyMarket.Core.dll
+C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Infraestructure\bin\Debug\netcoreapp3.1\CurrencyMarket.Entities.dll
+C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Infraestructure\bin\Debug\netcoreapp3.1\CurrencyMarket.Core.pdb
+C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Infraestructure\bin\Debug\netcoreapp3.1\CurrencyMarket.Entities.pdb
+C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Infraestructure\obj\Debug\netcoreapp3.1\CurrencyMarket.Infraestructure.csproj.CoreCompileInputs.cache
+C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Infraestructure\obj\Debug\netcoreapp3.1\CurrencyMarket.Infraestructure.csproj.CopyComplete
+C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Infraestructure\obj\Debug\netcoreapp3.1\CurrencyMarket.Infraestructure.dll
+C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Infraestructure\obj\Debug\netcoreapp3.1\CurrencyMarket.Infraestructure.pdb
+C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Infraestructure\obj\Debug\netcoreapp3.1\CurrencyMarket.Infraestructure.genruntimeconfig.cache

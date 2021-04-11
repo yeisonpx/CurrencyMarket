@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="BusinessServices\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="Interfaces\BusinessServices\" />
+    <Folder Include="Proxies\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CurrencyMarket.Entities\CurrencyMarket.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

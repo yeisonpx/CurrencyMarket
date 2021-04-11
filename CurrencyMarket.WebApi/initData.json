@@ -1,0 +1,14 @@
+{
+  "Currencies": [
+    {
+      "id": "USD",
+      "shortName": "dolar",
+      "name": "Dolar"
+    },
+    {
+      "id": "EUR",
+      "shortName": "euro",
+      "name": "Euro"
+    }
+  ]
+}
