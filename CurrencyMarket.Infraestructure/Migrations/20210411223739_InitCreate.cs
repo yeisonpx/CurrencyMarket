@@ -13,7 +13,8 @@ namespace CurrencyMarket.Infraestructure.Migrations
                 {
                     Id = table.Column<string>(nullable: false),
                     ShortName = table.Column<string>(nullable: true),
-                    Name = table.Column<string>(nullable: true)
+                    Name = table.Column<string>(nullable: true),
+                    ExchangeLimit = table.Column<double>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -27,7 +28,7 @@ namespace CurrencyMarket.Infraestructure.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<int>(nullable: false),
-                    Amount = table.Column<long>(nullable: false),
+                    Amount = table.Column<double>(nullable: false),
                     CurrencyId = table.Column<string>(nullable: true),
                     CreationDate = table.Column<DateTime>(nullable: false)
                 },
@@ -41,6 +42,16 @@ namespace CurrencyMarket.Infraestructure.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.InsertData(
+                table: "Currencies",
+                columns: new[] { "Id", "ExchangeLimit", "Name", "ShortName" },
+                values: new object[] { "USD", 200.0, "Dolar", "dolar" });
+
+            migrationBuilder.InsertData(
+                table: "Currencies",
+                columns: new[] { "Id", "ExchangeLimit", "Name", "ShortName" },
+                values: new object[] { "REAL", 300.0, "Real", "real" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_CurrencyExchanges_CurrencyId",

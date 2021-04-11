@@ -24,6 +24,9 @@ namespace CurrencyMarket.Infraestructure.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<double>("ExchangeLimit")
+                        .HasColumnType("float");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -33,6 +36,22 @@ namespace CurrencyMarket.Infraestructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Currencies");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "USD",
+                            ExchangeLimit = 200.0,
+                            Name = "Dolar",
+                            ShortName = "dolar"
+                        },
+                        new
+                        {
+                            Id = "REAL",
+                            ExchangeLimit = 300.0,
+                            Name = "Real",
+                            ShortName = "real"
+                        });
                 });
 
             modelBuilder.Entity("CurrencyMarket.Entities.CurrencyExchange", b =>
@@ -42,8 +61,8 @@ namespace CurrencyMarket.Infraestructure.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<long>("Amount")
-                        .HasColumnType("bigint");
+                    b.Property<double>("Amount")
+                        .HasColumnType("float");
 
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");

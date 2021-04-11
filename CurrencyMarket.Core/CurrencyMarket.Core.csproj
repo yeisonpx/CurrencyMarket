@@ -5,13 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="BusinessServices\" />
-    <Folder Include="DTOs\" />
-    <Folder Include="Interfaces\BusinessServices\" />
-    <Folder Include="Proxies\" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CurrencyMarket.Common\CurrencyMarket.Common.csproj" />
     <ProjectReference Include="..\CurrencyMarket.Entities\CurrencyMarket.Entities.csproj" />
   </ItemGroup>
 

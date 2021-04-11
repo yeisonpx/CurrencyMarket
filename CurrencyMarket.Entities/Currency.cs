@@ -7,7 +7,7 @@ namespace CurrencyMarket.Entities
     public class Currency
     {
         public string Id { get; set; }
-        public string ShortName { get; set; }
         public string Name { get; set; }
+        public double ExchangeLimit { get; set; }
     }
 }

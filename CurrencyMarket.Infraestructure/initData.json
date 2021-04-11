@@ -1,14 +1,14 @@
 {
-  "Currencies": [
+  "DefaultCurrencies": [
     {
-      "id": "USD",
-      "shortName": "dolar",
-      "name": "Dolar"
+      "id": "dolar",
+      "name": "Dolar",
+      "exchangeLimit": 200
     },
     {
-      "id": "EUR",
-      "shortName": "euro",
-      "name": "Euro"
+      "id": "real",
+      "name": "Real",
+      "exchangeLimit": 300
     }
   ]
 }

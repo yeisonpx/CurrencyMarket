@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyMarket.Entities", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyMarket.Core", "CurrencyMarket.Core\CurrencyMarket.Core.csproj", "{BF3A0872-CA00-4150-95CE-2D22B3BA8DF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyMarket.Infraestructure", "CurrencyMarket.Infraestructure\CurrencyMarket.Infraestructure.csproj", "{812593CF-7F97-4E4A-8C81-0CFC3CE484B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyMarket.Infraestructure", "CurrencyMarket.Infraestructure\CurrencyMarket.Infraestructure.csproj", "{812593CF-7F97-4E4A-8C81-0CFC3CE484B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyMarket.Common", "CurrencyMarket.Common\CurrencyMarket.Common.csproj", "{AFABA86F-9FF8-4794-A8E2-76366DEB097B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyMarket.Common", "CurrencyMarket.Common\CurrencyMarket.Common.csproj", "{AFABA86F-9FF8-4794-A8E2-76366DEB097B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyMarket.CoreTests", "CurrencyMarket.CoreTests\CurrencyMarket.CoreTests.csproj", "{6ECCFE18-2890-435E-BEBD-C7C669BFED27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{AFABA86F-9FF8-4794-A8E2-76366DEB097B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFABA86F-9FF8-4794-A8E2-76366DEB097B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFABA86F-9FF8-4794-A8E2-76366DEB097B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ECCFE18-2890-435E-BEBD-C7C669BFED27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ECCFE18-2890-435E-BEBD-C7C669BFED27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ECCFE18-2890-435E-BEBD-C7C669BFED27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ECCFE18-2890-435E-BEBD-C7C669BFED27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
