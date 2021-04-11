@@ -1,9 +1,0 @@
-C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Entities\bin\Debug\netcoreapp3.1\CurrencyMarket.Entities.deps.json
-C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Entities\bin\Debug\netcoreapp3.1\CurrencyMarket.Entities.dll
-C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Entities\bin\Debug\netcoreapp3.1\CurrencyMarket.Entities.pdb
-C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Entities\obj\Debug\netcoreapp3.1\CurrencyMarket.Entities.AssemblyInfoInputs.cache
-C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Entities\obj\Debug\netcoreapp3.1\CurrencyMarket.Entities.AssemblyInfo.cs
-C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Entities\obj\Debug\netcoreapp3.1\CurrencyMarket.Entities.csproj.CoreCompileInputs.cache
-C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Entities\obj\Debug\netcoreapp3.1\CurrencyMarket.Entities.dll
-C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Entities\obj\Debug\netcoreapp3.1\CurrencyMarket.Entities.pdb
-C:\Users\YeisonPX\source\repos\CurrencyMarket\CurrencyMarket.Entities\obj\Debug\netcoreapp3.1\CurrencyMarket.Entities.csprojAssemblyReference.cache
