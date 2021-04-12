@@ -7,6 +7,8 @@ using CurrencyMarket.Infraestructure.APIClients;
 using CurrencyMarket.Infraestructure.Repositories;
 using CurrencyMarket.WebApi.Configuration.Extensions;
 using CurrencyMarket.WebApi.Configuration.Middlewares;
+using CurrencyMarket.WebApi.Configuration.Validations;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -27,7 +29,8 @@ namespace CurrencyMarket.WebApi
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();    
+            services.AddControllers()
+                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateExchangeRequestValidator>());            
             services.AddScoped<ICurrencyService, CurrencyService>();
             services.AddScoped<IExchangeService, ExchangeService>();
 

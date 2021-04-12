@@ -23,6 +23,7 @@ namespace CurrencyMarket.Infraestructure.APIClients
             _ClientFactory = clientFactory;
             _AppSettings = options.Value;
         }
+
         public async  Task<CurrencyPrice> GetCurrenPriceAsync()
         {
             var client = _ClientFactory.CreateClient("DolarHttpClient");

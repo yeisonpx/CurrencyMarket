@@ -11,27 +11,28 @@ namespace CurrencyMarket.CoreTests
     public class CurrencyServiceTests
     {
         [Fact]
-        public async Task get_USD_current_price_ShouldCallDolarHttpClient()
+        public async Task get_current_price_ShouldCallServiceClient()
         {
             //Arrange
             string currencyCode = "dolar";
-            var dolarPoxy = new Mock<ICurrencyMarketServiceClient>();
+            var dolarServiceClient = new Mock<ICurrencyMarketServiceClient>();
+            var proxyFactory = new Mock<ICurrencyMarketServiceClientFactory>();
+
             var expected = new CurrencyPrice()
             {
                 BuyPrice = 58,
                 Message = "Test of message",
                 SalePrice = 60
             };
-            dolarPoxy.Setup(a => a.GetCurrenPriceAsync()).Returns(()=>Task.FromResult(expected));
-            var proxyFactory = new Mock<ICurrencyMarketServiceClientFactory>();
-            proxyFactory.Setup(a => a.Get(It.IsAny<string>())).Returns(dolarPoxy.Object);
+            dolarServiceClient.Setup(a => a.GetCurrenPriceAsync()).Returns(()=>Task.FromResult(expected));
+            proxyFactory.Setup(a => a.Get(It.IsAny<string>())).Returns(dolarServiceClient.Object);
             ICurrencyService currencyService = new CurrencyService(proxyFactory.Object);
 
             //Action
             CurrencyPrice currencyPrice = await currencyService.GetCurrencyPriceAsync(currencyCode);
 
             //Assert
-            dolarPoxy.Verify(proxy => proxy.GetCurrenPriceAsync(), Times.Once);
+            dolarServiceClient.Verify(proxy => proxy.GetCurrenPriceAsync(), Times.Once);
             Assert.NotNull(currencyPrice);
             Assert.Equal(expected.BuyPrice, currencyPrice.BuyPrice);
             Assert.Equal(expected.SalePrice, currencyPrice.SalePrice);
