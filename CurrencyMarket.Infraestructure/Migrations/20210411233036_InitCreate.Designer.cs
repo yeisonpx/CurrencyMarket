@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CurrencyMarket.Infraestructure.Migrations
 {
     [DbContext(typeof(CurrencyMarketDbContext))]
-    [Migration("20210411223739_InitCreate")]
+    [Migration("20210411233036_InitCreate")]
     partial class InitCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,9 +32,6 @@ namespace CurrencyMarket.Infraestructure.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ShortName")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
                     b.ToTable("Currencies");
@@ -42,17 +39,15 @@ namespace CurrencyMarket.Infraestructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "USD",
+                            Id = "dolar",
                             ExchangeLimit = 200.0,
-                            Name = "Dolar",
-                            ShortName = "dolar"
+                            Name = "Dolar"
                         },
                         new
                         {
-                            Id = "REAL",
+                            Id = "real",
                             ExchangeLimit = 300.0,
-                            Name = "Real",
-                            ShortName = "real"
+                            Name = "Real"
                         });
                 });
 

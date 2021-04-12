@@ -9,14 +9,14 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CurrencyMarket.Core.Proxies
+namespace CurrencyMarket.Infraestructure.APIClients
 {
-    public class DolarCurrencyProxy : ICurrencyMarketProxy
+    public class DolarCurrencyServiceClient : ICurrencyMarketServiceClient
     {
         private IHttpClientFactory _ClientFactory;
         private AppSettings _AppSettings;
 
-        public DolarCurrencyProxy(IHttpClientFactory clientFactory,
+        public DolarCurrencyServiceClient(IHttpClientFactory clientFactory,
             IOptions<AppSettings> options
             )
         {

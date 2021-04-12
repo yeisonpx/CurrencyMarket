@@ -30,9 +30,6 @@ namespace CurrencyMarket.Infraestructure.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ShortName")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
                     b.ToTable("Currencies");
@@ -40,17 +37,15 @@ namespace CurrencyMarket.Infraestructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "USD",
+                            Id = "dolar",
                             ExchangeLimit = 200.0,
-                            Name = "Dolar",
-                            ShortName = "dolar"
+                            Name = "Dolar"
                         },
                         new
                         {
-                            Id = "REAL",
+                            Id = "real",
                             ExchangeLimit = 300.0,
-                            Name = "Real",
-                            ShortName = "real"
+                            Name = "Real"
                         });
                 });
 

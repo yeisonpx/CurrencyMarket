@@ -12,10 +12,10 @@ namespace CurrencyMarket.Core.BusinessServices
 {
     public class CurrencyService : ICurrencyService
     {
-        private ICurrencyMarketProxyFactory _ProxyFactory;
+        private ICurrencyMarketServiceClientFactory _ProxyFactory;
 
         public CurrencyService(
-            ICurrencyMarketProxyFactory currencyProxyFactory
+            ICurrencyMarketServiceClientFactory currencyProxyFactory
             )
         {
             _ProxyFactory = currencyProxyFactory;

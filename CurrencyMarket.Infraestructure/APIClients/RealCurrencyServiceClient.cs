@@ -6,13 +6,13 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CurrencyMarket.Core.Proxies
+namespace CurrencyMarket.Infraestructure.APIClients
 {
-    public class RealCurrencyProxy : ICurrencyMarketProxy
+    public class RealCurrencyServiceClient : ICurrencyMarketServiceClient
     {
-        private readonly ICurrencyMarketProxyFactory _Factory;
+        private readonly ICurrencyMarketServiceClientFactory _Factory;
 
-        public RealCurrencyProxy(ICurrencyMarketProxyFactory factory)
+        public RealCurrencyServiceClient(ICurrencyMarketServiceClientFactory factory)
         {
             _Factory = factory;
         }

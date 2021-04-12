@@ -4,8 +4,8 @@ using System.Text;
 
 namespace CurrencyMarket.Core.Interfaces.Proxies
 {
-    public interface ICurrencyMarketProxyFactory
+    public interface ICurrencyMarketServiceClientFactory
     {
-        ICurrencyMarketProxy Get(string code);
+        ICurrencyMarketServiceClient Get(string code);
     }
 }

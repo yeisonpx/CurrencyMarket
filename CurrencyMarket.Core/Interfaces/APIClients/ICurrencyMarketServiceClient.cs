@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CurrencyMarket.Core.Interfaces.Proxies
 {
-    public interface ICurrencyMarketProxy
+    public interface ICurrencyMarketServiceClient
     {
         Task<CurrencyPrice> GetCurrenPriceAsync();
     }

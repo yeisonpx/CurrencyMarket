@@ -36,10 +36,9 @@ namespace CurrencyMarket.Core.BusinessServices
             }
             
             var currencyPrice = await _CurrencyService.GetCurrencyPriceAsync(request.CurrencyCode);
-            double exchangeAmount = Math.Round(request.Amount / currencyPrice.SalePrice, 2);
-
+            double requestAmount = Math.Round(request.Amount / currencyPrice.SalePrice, 2);
             double currentMonthExchanges = _CurrencyRepository.GetExchangeMonthSummary(request.UserId, currency.Id);
-            double total = exchangeAmount + currentMonthExchanges;
+            double total = requestAmount + currentMonthExchanges;
             if (total > currency.ExchangeLimit)
             {
                 throw new CurrencyExchangeLimitException(currency.ExchangeLimit, currency.Name);
@@ -47,7 +46,7 @@ namespace CurrencyMarket.Core.BusinessServices
 
             var exchange = new Entities.CurrencyExchange()
             {
-                Amount = exchangeAmount,
+                Amount = requestAmount,
                 CurrencyId = currency.Id,
                 UserId = request.UserId,
                 CreationDate = DateTime.Now,                

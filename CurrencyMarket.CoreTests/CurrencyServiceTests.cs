@@ -2,9 +2,7 @@ using CurrencyMarket.Core.BusinessServices;
 using CurrencyMarket.Core.DTOs;
 using CurrencyMarket.Core.Interfaces.BusinessServices;
 using CurrencyMarket.Core.Interfaces.Proxies;
-using CurrencyMarket.Core.Proxies;
 using Moq;
-using System;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -17,7 +15,7 @@ namespace CurrencyMarket.CoreTests
         {
             //Arrange
             string currencyCode = "dolar";
-            var dolarPoxy = new Mock<ICurrencyMarketProxy>();
+            var dolarPoxy = new Mock<ICurrencyMarketServiceClient>();
             var expected = new CurrencyPrice()
             {
                 BuyPrice = 58,
@@ -25,7 +23,7 @@ namespace CurrencyMarket.CoreTests
                 SalePrice = 60
             };
             dolarPoxy.Setup(a => a.GetCurrenPriceAsync()).Returns(()=>Task.FromResult(expected));
-            var proxyFactory = new Mock<ICurrencyMarketProxyFactory>();
+            var proxyFactory = new Mock<ICurrencyMarketServiceClientFactory>();
             proxyFactory.Setup(a => a.Get(It.IsAny<string>())).Returns(dolarPoxy.Object);
             ICurrencyService currencyService = new CurrencyService(proxyFactory.Object);
 

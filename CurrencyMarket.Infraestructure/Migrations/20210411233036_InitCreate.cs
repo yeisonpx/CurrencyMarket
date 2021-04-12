@@ -12,7 +12,6 @@ namespace CurrencyMarket.Infraestructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
-                    ShortName = table.Column<string>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     ExchangeLimit = table.Column<double>(nullable: false)
                 },
@@ -45,13 +44,13 @@ namespace CurrencyMarket.Infraestructure.Migrations
 
             migrationBuilder.InsertData(
                 table: "Currencies",
-                columns: new[] { "Id", "ExchangeLimit", "Name", "ShortName" },
-                values: new object[] { "USD", 200.0, "Dolar", "dolar" });
+                columns: new[] { "Id", "ExchangeLimit", "Name" },
+                values: new object[] { "dolar", 200.0, "Dolar" });
 
             migrationBuilder.InsertData(
                 table: "Currencies",
-                columns: new[] { "Id", "ExchangeLimit", "Name", "ShortName" },
-                values: new object[] { "REAL", 300.0, "Real", "real" });
+                columns: new[] { "Id", "ExchangeLimit", "Name" },
+                values: new object[] { "real", 300.0, "Real" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_CurrencyExchanges_CurrencyId",

@@ -1,6 +1,7 @@
 ﻿using CurrencyMarket.Common.Exceptions;
 using CurrencyMarket.WebApi.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -17,12 +18,13 @@ namespace CurrencyMarket.WebApi.Configuration.Middlewares
         {
             _Next = next;
         }
-        public async Task Invoke(HttpContext context)
+        public async Task Invoke(HttpContext context, ILogger<ErrorEventMiddleware> logger)
         {
             try { 
                 await _Next(context);
             }catch(Exception ex)
             {
+                logger.LogError(ex.Message);
                 RequestErrorModel response = new RequestErrorModel();
                 switch (ex)
                 {
