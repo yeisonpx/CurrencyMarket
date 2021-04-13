@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CurrencyMarket.Core.Interfaces.BusinessServices;
 using CurrencyMarket.WebApi.Configuration.Resources;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CurrencyMarket.WebApi.Controllers

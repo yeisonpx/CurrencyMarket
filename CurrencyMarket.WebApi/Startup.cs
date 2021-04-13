@@ -41,7 +41,11 @@ namespace CurrencyMarket.WebApi
 
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
             services.AddDbContextConfig(Configuration);
-            services.AddHttpClients(Configuration);            
+            services.AddHttpClients(Configuration);
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options => options.WithOrigins("http://localhost:8080"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +55,7 @@ namespace CurrencyMarket.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseCors("AllowOrigin");
             app.UseMiddleware<ErrorEventMiddleware>();
             app.UseRouting();
             app.UseHttpsRedirection();
