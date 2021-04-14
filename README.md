@@ -13,7 +13,7 @@ Lo cual permitiria desplegar los contenedores de web-api en net core y base de d
 
 Url de servicios desplegados:
 - WebAPI: http://localhost:5001
-- SQL Server: localhost,5002
+- SQL Server: localhost:5002
 
 ### Opcion 2: Ejecutar proyecto con visual studio(recomendado 2019+)
 
