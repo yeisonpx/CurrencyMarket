@@ -20,7 +20,7 @@ namespace CurrencyMarket.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(CreateExchangeRequest request)
+        public async Task<IActionResult> Post([FromBody]CreateExchangeRequest request)
         {
             var response = await _ExchangeService.CreateAsync(request);
             return CreatedAtAction(nameof(Post),response);

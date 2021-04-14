@@ -29,7 +29,7 @@ namespace CurrencyMarket.WebApi
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers()
+            services.AddControllers().AddNewtonsoftJson()
                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateExchangeRequestValidator>());            
             services.AddScoped<ICurrencyService, CurrencyService>();
             services.AddScoped<IExchangeService, ExchangeService>();
@@ -42,20 +42,24 @@ namespace CurrencyMarket.WebApi
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
             services.AddDbContextConfig(Configuration);
             services.AddHttpClients(Configuration);
-            services.AddCors(c =>
-            {
-                c.AddPolicy("AllowOrigin", options => options.WithOrigins("http://localhost:8080"));
-            });
+            services.AddCors();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //global cors policy
+            app.UseCors(x => x
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true) // allow any origin
+                .AllowCredentials()); // allow credentials
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseCors("AllowOrigin");
             app.UseMiddleware<ErrorEventMiddleware>();
             app.UseRouting();
             app.UseHttpsRedirection();
