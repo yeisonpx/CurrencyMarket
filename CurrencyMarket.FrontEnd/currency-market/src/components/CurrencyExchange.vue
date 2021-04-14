@@ -79,13 +79,11 @@ methods: {
         };
         try{
             let response = await exchageService.exchange(request);
-            console.log(response);
             if(response){
                 this.model.exchangeResult = response;
                 this.model.lastExchangeAmount = request.amount;
             }
         } catch(error){          
-            console.log(error);
             if(error.responseJSON.errors){
                 this.model.errors = error.responseJSON.errors;
                 this.model.errorMessage = error.responseJSON.title;

@@ -4,7 +4,7 @@ export default {
         let promise = new Promise((resolve,reject)=>{
             $.ajax({
                 method: "POST",
-                url: "https://localhost:44392/api/exchanges",
+                url: `${process.env.API_URL}/api/exchanges`,
                 data: JSON.stringify(request),
                 dataType:"json",
                 contentType: 'application/json'
