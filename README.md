@@ -28,3 +28,5 @@ Url de servicios desplegados:
 npm install
 npm run serve
 ```
+
+**NOTA:** Dependiendo de si el web api esta corriendo en docker o local su URL cambia por lo cual se debe cambiar de la variable de entorno VUE_APP_ROOT_API en el archivo .env.development. 
